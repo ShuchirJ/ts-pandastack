@@ -12,6 +12,10 @@ while true; do
   ./tailscale up --hostname=vpn-panda --advertise-exit-node
   sleep 1
 done &
+
+while true; do
+  ./tailscale web --listen 0.0.0.0:2521
+  sleep 1
+done &
  
 sleep infinity
- 
